@@ -1,0 +1,17 @@
+{
+   "content_scripts": [ {
+      "css": [ "css/style.css" ],
+      "js": [ "js/FileSaver.js", "js/script.js" ],
+      "matches": [ "*://vk.com/*" ]
+   } ],
+   "description": "\u0421\u043A\u0430\u0447\u0438\u0432\u0430\u0435\u0442 \u043C\u0443\u0437\u044B\u043A\u0443 \u0438\u0437 \u0412\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u0441 \u043E\u043F\u0446\u0438\u0435\u0439 \u043C\u0443\u043B\u044C\u0442\u0438\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u043D\u044B\u0445 \u043F\u0435\u0441\u0435\u043D.",
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeP2SZnZDlMDNW/cTWw7NBZ+jmIXJwY401i0THNjGKMTHJh+2Hd8rT03yyykWVqkLI9O7hANlWqEEt8970xkVubHqWAMZ/2M+cXNiRQnwdR36BmVw56P7PNF6g/BcfUiU/x1N7xsKJKOFJlYG3kid2Tf5lkLMq3MhuYbEnhAcElQIDAQAB",
+   "manifest_version": 2,
+   "name": "VK Music Saver",
+   "permissions": [ "http://vk.com/*", "http://*.userapi.com/*", "https://vk.com/*", "https://*.userapi.com/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

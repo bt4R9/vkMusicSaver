@@ -1,0 +1,222 @@
+@-webkit-keyframes gif {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 20px 20px;
+    }
+}
+
+.vkm-download {
+	display: none;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAEgSURBVHjalNKxS8NAFMfx7yV3yTWkiCDi4B/i4uDq6ODi4OIkroIddHBp0X+gg47diltcOtUE6yJIShfFzUFEEKfEluZcTCCmoP1tj3cfePfuxO7xJcAhcMrfOQHOJXAENPlfzgBb5kAISNIJ0yyrnLQti5pWGANAUwIpoJN0wt7WOqvLixX08vbBxVWIdhVAKvOGUjY394/UXKeCkq8xStlFXaAkHbO/vcHK0kIFvb5/ctDq4HsaACtvuI4iiIYzbx9EQ1xHFXWBHCUJwph2t18C7W6fIIxxlKyOZ4yh7ml6gxEC2Nlco3N9R28wou5pzM/qSihfu+9poocnbuNnsizD9zRClMeVgP4NbWEV7zMj2gIazJeGBFrAdJ6/9z0AYYtO96L7ydsAAAAASUVORK5CYII=") no-repeat;
+	width: 13px;
+	height: 13px;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+
+.vkm-progressBar {
+	background: #D8DEE4;
+	border-radius: 2px;
+	margin: 0 auto;
+	height: 4px;
+	display: none;
+	z-index: 9999;
+}
+
+.vkm-progress {
+	-webkit-animation-delay: 0s;
+	-webkit-animation-direction: normal;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: none;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: gif;
+	-webkit-animation-timing-function: linear;
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: 20px 20px;
+	-webkit-border-horizontal-spacing: 3px;
+	-webkit-border-image: none;
+	-webkit-border-vertical-spacing: 3px;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #9C9FF2;
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(0, 0, 0, 0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.2)), color-stop(0.75, rgba(0, 0, 0, 0.2)), color-stop(0.75, transparent), to(transparent));
+	background-origin: padding-box;
+	background-size: 20px 20px;
+	float: left;
+	width: 0%;
+	height: 4px;
+	border-radius: 2px;
+}
+
+.vkm-progress-completed {
+	background-color: #BFB;
+	-webkit-animation-name: none;
+	background-image: -webkit-gradient(linear, 100% 0, 100% 100%, color-stop(0.25, rgba(0, 0, 0, 0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.2)), color-stop(0.75, rgba(0, 0, 0, 0.2)), color-stop(0.75, transparent), to(transparent));
+}
+
+.vkm-btn button {
+	width: 100% !important;
+}
+
+.vkm-info {
+	color: #777;
+	font-size: 0.9em;
+	overflow: hidden;
+	width: 100px;
+	height: 15px;
+	text-align: right;
+	display: block;
+}
+
+.over .duration {
+	display: none !important;
+}
+
+/* audio page */
+
+#audios_list .over .vkm-info {
+	display: none;
+}
+
+#audios_list .current .vkm-info {
+	color: #B1BFCF;
+}
+
+#audios_list .over .info .title_wrap {
+	width: 305px !important;
+}
+
+#audios_list .audio .title_wrap {
+	width: 240px !important;;
+}
+
+#album_filters .vkm-cp {
+	width: 100%;
+}
+
+#album_filters .vkm-btn {
+	width: 150px;
+	position: static;
+	margin: 2px 0px 1px 0;
+	text-align: center;
+}
+
+/* --- */
+
+/* profile */
+
+#profile_audios .title_wrap {
+	width: 130px;
+}
+
+/* --- */
+
+/* wall */
+#profile_wall .over .vkm-info {
+	display: none;
+}
+
+#profile_wall .title_wrap {
+	width: 60%;
+} 
+
+#profile_wall .over .title_wrap {
+	width: 90%;
+}
+
+/* --- */
+
+/* popup */
+
+#pad_wrap .over .vkm-info {
+	display: none;
+}
+
+#pad_wrap .current .vkm-info {
+	color: #B1BFCF;
+}
+
+#pad_wrap .over .info .title_wrap {
+	width: 380px !important;
+}
+
+#pad_wrap .audio .title_wrap {
+	width: 300px !important;;
+}
+
+#pad_footer #vkm-cp .vkm-btn {
+	margin-top: -19px;
+	margin-left: 4px;
+}
+
+/* --- */
+
+/* search */
+#search_content .vkm-info {
+	display: block !important;
+}
+
+#search_content .over .vkm-info {
+	display: none !important;
+}
+
+#search_content .title_wrap {
+	width: 260px;
+} 
+
+#search_content .over .title_wrap {
+	width: 340px;
+}
+
+#search_filters #vkm-cp {
+	width: 170px;
+}
+
+#search_filters .vkm-btn {
+	width: 150px;
+	position: static;
+	margin: 2px 8px 1px 0;
+	text-align: center;
+}
+/* --- */
+
+/* feed */
+
+#feed_wall .title_wrap {
+	width: 360px;
+} 
+
+#feed_wall .over .title_wrap {
+	width: 420px;
+}
+
+#feed_wall .over .vkm-info {
+	display: none;
+}
+
+/* --- */
+.over .vkm-download {
+	display: block;
+}
+
+.vkm-download:hover {
+	opacity: 1 !important;
+}
+
+/* choose audio */
+#choose_audio_rows .title_wrap {
+	width: 265px;
+}
+
+#choose_audio_rows .over .title_wrap {
+	width: 360px;
+} 
+
+#choose_audio_rows .over .vkm-info {
+	display: none;
+}
+/* --- */
