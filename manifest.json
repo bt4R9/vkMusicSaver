@@ -8,10 +8,8 @@
    "icons": {
       "128": "icon.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeP2SZnZDlMDNW/cTWw7NBZ+jmIXJwY401i0THNjGKMTHJh+2Hd8rT03yyykWVqkLI9O7hANlWqEEt8970xkVubHqWAMZ/2M+cXNiRQnwdR36BmVw56P7PNF6g/BcfUiU/x1N7xsKJKOFJlYG3kid2Tf5lkLMq3MhuYbEnhAcElQIDAQAB",
-   "manifest_version": 2,
+  "manifest_version": 2,
    "name": "VK Music Saver",
    "permissions": [ "http://vk.com/*", "http://*.userapi.com/*", "https://vk.com/*", "https://*.userapi.com/*" ],
-   "update_url": "http://clients2.google.com/service/update2/crx",
    "version": "1.2.1"
 }
