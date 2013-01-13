@@ -88,6 +88,15 @@ var vkm = {
 		if (document.getElementById('choose_audio_rows')) {
 			this.render('choseaudio', 'choose_audio_rows');
 		}
+		// IM
+		if (document.getElementById('im_content')) {
+			this.render('im', 'im_content');
+		}
+		
+		//groups
+		if (document.getElementById('page_wall_posts')) {
+			this.render('groups', 'page_wall_posts');
+		}
 	},
 	render: function(type, container) {
 		var songsPre = document.getElementById(container).getElementsByTagName('input');
@@ -119,8 +128,10 @@ var vkm = {
 					songContainer.getElementsByClassName('player')[0].style.marginTop = '2px';
 					break;
 
+				case 'im':
 				case 'wall':
 				case 'feed':
+				case 'groups':
 					songContainer = song.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 					progressBar.style.width = '98%';
 					songContainer.getElementsByClassName('area')[0].insertBefore(progressBar, songContainer.getElementsByClassName('player')[0]);
@@ -156,7 +167,7 @@ var vkm = {
 					break;
 				case 'choseaudio':
 					progressBar.style.width = '405px';
-					songContainer = song.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+					songContainer = song.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 					songContainer.getElementsByClassName('player')[0].style.marginTop = '2px';
 					songContainer.getElementsByClassName('area')[0].insertBefore(progressBar, songContainer.getElementsByClassName('player')[0]);
 					break;
@@ -184,6 +195,7 @@ var vkm = {
 			switch(type) {
 				case 'feed':
 				case 'wall':
+				case 'groups':
 					//Save button only if 2 or more songs in container
 					var songsCount = params.songContainer.parentNode.getElementsByClassName('audio').length;
 					if(params.songContainer.parentNode.getElementsByClassName('vkm-saveAll').length == 0 && songsCount > 1) {
@@ -341,6 +353,8 @@ var vkm = {
 						
 					case 'wall':
 					case 'feed':
+					case 'im':
+					case 'groups':
 						dl.style.cssText = 'position: absolute; right: 10px; top: 8px';
 						params.songContainer.appendChild(dl);
 						info.innerText += ' | ';
@@ -420,6 +434,7 @@ var vkm = {
 					case 'feed':
 					case 'wall':
 					case 'search':
+					case 'groups':
 						progressBar = songsPre[i].parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName('vkm-progressBar')[0];
 						break;
 					case 'audio':
@@ -481,10 +496,8 @@ var vkm = {
 		xhr.open('GET', params.songLink, true);
 		xhr.onload = function(e){
 			if(this.status == 200){
-				BlobBuilder = window.MozBlobBuilder || window.WebKitBlobBuilder || window.BlobBuilder;
-				var bb = new BlobBuilder();
-				bb.append(this.response);
-				var blob = bb.getBlob('audio/mpeg');
+				var dataView = new DataView(this.response);
+				var blob = new Blob([dataView], { type: 'audio/mpeg' });
 				saveAs(blob, params.songDLName + '.mp3');
 				params.status = 1;
 				callback(params);
