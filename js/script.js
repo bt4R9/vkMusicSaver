@@ -97,6 +97,11 @@ var vkm = {
 		if (document.getElementById('page_wall_posts')) {
 			this.render('groups', 'page_wall_posts');
 		}
+		
+		//groups post in dialog
+		if (document.getElementById('wl_post')) {
+			this.render('groups_post', 'wl_post');
+		}
 	},
 	render: function(type, container) {
 		var songsPre = document.getElementById(container).getElementsByTagName('input');
@@ -132,6 +137,7 @@ var vkm = {
 				case 'wall':
 				case 'feed':
 				case 'groups':
+				case 'groups_post':
 					songContainer = song.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 					progressBar.style.width = '98%';
 					songContainer.getElementsByClassName('area')[0].insertBefore(progressBar, songContainer.getElementsByClassName('player')[0]);
@@ -196,6 +202,7 @@ var vkm = {
 				case 'feed':
 				case 'wall':
 				case 'groups':
+				case 'groups_post':
 					//Save button only if 2 or more songs in container
 					var songsCount = params.songContainer.parentNode.getElementsByClassName('audio').length;
 					if(params.songContainer.parentNode.getElementsByClassName('vkm-saveAll').length == 0 && songsCount > 1) {
@@ -355,6 +362,7 @@ var vkm = {
 					case 'feed':
 					case 'im':
 					case 'groups':
+					case 'groups_post':
 						dl.style.cssText = 'position: absolute; right: 10px; top: 8px';
 						params.songContainer.appendChild(dl);
 						info.innerText += ' | ';
@@ -435,6 +443,7 @@ var vkm = {
 					case 'wall':
 					case 'search':
 					case 'groups':
+					case 'groups_post':
 						progressBar = songsPre[i].parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName('vkm-progressBar')[0];
 						break;
 					case 'audio':
